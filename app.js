@@ -12,6 +12,11 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Setup Index dengan metode get
+app.get('/', function(req, res){
+  res.send("Ini adalah index");
+});
+
 /// Setup server
 var port = 3000;
 app.listen(port,function(){
