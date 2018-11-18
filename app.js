@@ -25,13 +25,11 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Set routes
+var pages = require("./routes/pages.js");
 
-//setup index dengan metode get
-app.get('/', function(req, res){
-    res.render("index",{
-      title: "DewaBujang Shopping"
-    });
-    });
+// redirect 
+app.use('/', pages);
 
 //setup server
 var port = 3000;
