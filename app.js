@@ -28,7 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //setup index dengan metode get
 app.get('/', function(req, res){
-    res.send("Ini adalah index yoyo dan sudah connect ke mongodb");
+    res.render("index",{
+      title: "DewaBujang Shopping"
+    });
     });
 
 //setup server
