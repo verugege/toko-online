@@ -10,7 +10,7 @@ var db = mongoose.connection;
 db.on("error", console.error.bind(console,"connection error"));
 
 db.once("open",function(){
-console.log("Sudah Connect Ke Mongodb Coy");
+console.log("Sudah Connect Ke Mongodb Coy config database");
 });
 
 //initial app
